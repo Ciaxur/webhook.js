@@ -1,6 +1,6 @@
 {
     "name": "webhook.js",
-    "version": "1.0.1",
+    "version": "1.0.5",
     "description": "Discord Webhook POST using JavaScript",
     "main": "app.js",
     "scripts": {

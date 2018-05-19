@@ -13,5 +13,5 @@
 ## Version 1.0.5
 - [x] Add to GitHub
 - [x] Organize Filing System
-- [ ] Patch Webhook Bug
+- [x] Patch Webhook Bug
     - *Error occurs when initiating request*

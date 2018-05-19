@@ -28,7 +28,7 @@ class Webhook {
     }
 
     initRequest(callback_func) {
-        request(this.options, null, (err, res, body) => {
+        request(null, this.options, (err, res, body) => {
             if (err) {
                 console.error('Webhook.js - Error');
                 console.error(err);

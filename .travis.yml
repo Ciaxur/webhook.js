@@ -1,8 +1,7 @@
 language: node_js
 node_js:
   - "iojs"
-before_install:
-  - npm install npm@latest -g
+  - "8"
 install: npm install
 cache:
   directories:

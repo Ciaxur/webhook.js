@@ -1,8 +1,9 @@
 // MODULE INIT
 var request = require('request'); // Simple HTTP Requests
 
+
 class Webhook {
-    // METHODS
+    // Constructors
     constructor(url, username, message, tts = false, avatar = null) {
         // VARS
         var data;
@@ -11,6 +12,7 @@ class Webhook {
         this.setupRequest(url, username, message, tts, avatar);
     }
 
+    // Methods
     setupRequest(url, username, message, tts = false, avatar = null) {
         this.data = {
             username: username,
@@ -38,17 +40,5 @@ class Webhook {
     }
 }
 
-exports.CreateHook = function(url, username, message, tts = false, avatar = null) {
-    return new Webhook(url, username, message, tts, avatar);
-}
-
-
-
-// DEBUG
-// var url = ''; // Discord Channel URL
-// var avatar = 'https://cdn3.iconfinder.com/data/icons/customer-support-7/32/40_robot_bot_customer_help_support_automatic_reply-512.png';
-// var username = 'Webhook BOT';
-// var msg = 'Hi I am your Webhook BOT!';
-
-// var web = new Webhook(url, username, msg, false, avatar);
-// web.initRequest();
+// MODULE EXPORTS
+module.exports.Webhook = Webhook;

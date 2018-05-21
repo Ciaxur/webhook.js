@@ -1,4 +1,4 @@
-# Webhook `Class` Documentation
+# **`Webhook Class`** Documentation
 
 Information about the Webhook class and what data is required for initiating `requests`.
 
@@ -6,11 +6,20 @@ Information about the Webhook class and what data is required for initiating `re
 
 ## **`POST`** Requests
 
-### **`CreateHook`** Method
+Setting up a Webhook POST Request:
 
 ```javascript
+// Add Module
+let Webhook = require('app.js');
+
 // Creating the Webhook class
-let webhook = CreateHook(url, username, message, tts, avatar);
+let hook = new Webhook(url, username, message, tts, avatar);
+
+// Initiating Request
+hook.initRequest();
+
+// Setting up a Request
+hook.setupRequest(url, username, message, tts, avatar);
 ```
 
 | Parameters            | Description                                          |

@@ -2,11 +2,15 @@
 
 **Program future fixes and updates:**
 
-## Version 1.1
-- [x] Add Better Class Initation Feature
+## Version 1.1 (*In Progress*)
+- [x] Add Better Class Initiation Feature
     - Remove the exported **`CreateHook`** method
     - Export the **`Webhook`** Class (*variable = new Webhook(`args`)*)
 - [ ] Improve the [Webhook Documentation](WebhookClass.md)
+- [ ] Add more Requests
+- [ ] Expand the **`Webhook`** Class
+    - [x] Add *`callback_func`* for **`initRequest`** method
+- [ ] Add Detailed Description Comments
 
 ---
 

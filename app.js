@@ -14,6 +14,7 @@ class Webhook {
 
     // Methods
     setupRequest(url, username, message, tts = false, avatar = null) {
+        // Setup data Object
         this.data = {
             username: username,
             content: message,
@@ -21,6 +22,7 @@ class Webhook {
             tts: tts
         }
 
+        // Setup options Object
         this.options = {
             method: 'POST',
             body: this.data,
@@ -34,8 +36,10 @@ class Webhook {
             if (err) {
                 console.error('Webhook.js - Error');
                 console.error(err);
-            } else
+            } else {
                 console.log("Webhook.js - Post Successful!");
+                callback_func(); // Call callback_func on Success
+            }
         });
     }
 }

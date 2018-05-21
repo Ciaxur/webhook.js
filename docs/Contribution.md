@@ -11,8 +11,8 @@ git clone https://github.com/Ciaxur/webhook.js
 
 ## Required Programs
 - A Git program
-    - [GitKraken](https://www.gitkraken.com/) (*Recommended*)
-    - [Git](https://git-scm.com/)
+    - [Git](https://git-scm.com/) (*Recommended*)
+    - [GitKraken](https://www.gitkraken.com/) 
 - [NodeJS](https://nodejs.org/) (*Latest* `npm` *version installed*)
 
 ---

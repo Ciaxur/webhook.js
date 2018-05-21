@@ -1,5 +1,5 @@
 // Require the webhoo.js Module
-const app = require('../app.js').Webhook;
+const Webhook = require('../app.js').Webhook;
 
 // Required Parameters
 let url = '';
@@ -7,6 +7,10 @@ let avatar = 'https://cdn3.iconfinder.com/data/icons/customer-support-7/32/40_ro
 let username = 'Webhook BOT';
 let msg = 'Hi I am your Webhook BOT!';
 
-// Initiate a Webhook Object
-let Web = new app(url, username, msg, false, avatar);
-Web.initRequest();
+// Setup a Webhook Object
+let hook = new Webhook(url, username, msg, false, avatar);
+
+// Initiate Webhook Request with callback function
+hook.initRequest(() => {
+    console.log("This is the callback_func");
+});

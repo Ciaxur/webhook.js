@@ -11,6 +11,8 @@
 - [ ] Expand the **`Webhook`** Class
     - [x] Add *`callback_func`* for **`initRequest`** method
 - [ ] Add Detailed Description Comments
+- [ ] Data Error Handle
+    - [ ] Invalid URL Handling
 
 ---
 

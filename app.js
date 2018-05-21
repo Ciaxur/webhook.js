@@ -38,7 +38,10 @@ class Webhook {
                 console.error(err);
             } else {
                 console.log("Webhook.js - Post Successful!");
-                callback_func(); // Call callback_func on Success
+
+                // Call callback_func on Success
+                if (callback_func)
+                    callback_func();
             }
         });
     }

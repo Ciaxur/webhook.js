@@ -1,5 +1,7 @@
-// Require the webhoo.js Module
-const Webhook = require('../app.js').Webhook;
+// Require the webhook.js Module
+let {
+    Webhook
+} = require('../app.js');
 
 // Required Parameters
 let url = '';

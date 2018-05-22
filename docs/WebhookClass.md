@@ -9,8 +9,8 @@ Information about the Webhook class and what data is required for initiating `re
 Setting up a Webhook POST Request:
 
 ```javascript
-// Add Module
-let Webhook = require('app.js');
+// Import Exported from Modules
+let { Webhook } = require('app.js');
 
 // Creating the Webhook class
 let hook = new Webhook(url, username, message, tts, avatar);

@@ -3,6 +3,7 @@
 **Program future fixes and updates:**
 
 ## Version 1.1 (*In Progress*)
+- [ ] Convert to **`Promise`** based requests
 - [x] Add Better Class Initiation Feature
     - Remove the exported **`CreateHook`** method
     - Export the **`Webhook`** Class (*variable = new Webhook(`args`)*)

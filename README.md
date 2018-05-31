@@ -61,8 +61,8 @@ More information about the `JSON Form` for excecuting can be found in [Discord's
 
 If you are willing to contribute to the project, please make sure to check out the available links below.
 
-- [How to Contribute](docs/Contribution.md)
-- [To-Do Task List](docs/TaskList.md)
+- [How to Contribute](CONTRIBUTING.md)
+- [Task List](docs/TaskList.md)
 
 ---
 

@@ -4,7 +4,7 @@
     "description": "Discord Webhook POST using JavaScript",
     "main": "app.js",
     "scripts": {
-        "start": "node app.js"
+        "start": "node ./src/app.js"
     },
     "author": "Omar Omar",
     "license": "MIT",

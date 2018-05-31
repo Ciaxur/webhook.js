@@ -3,7 +3,8 @@
 **Program future fixes and updates:**
 
 ## Version 1.1 (*In Progress*)
-- [ ] Re-Organize project directory
+- [ ] Add **`Jest`** for project testing
+- [x] Re-Organize project directory
 - [ ] Convert to **`Promise`** based requests
 - [x] Add Better Class Initiation Feature
     - Remove the exported **`CreateHook`** method

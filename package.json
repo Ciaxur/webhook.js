@@ -9,6 +9,7 @@
     "author": "Omar Omar",
     "license": "MIT",
     "dependencies": {
+        "jest": "^23.1.0",
         "request": "^2.85.0"
     }
 }

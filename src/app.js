@@ -1,18 +1,19 @@
 // MODULE INIT
-var request = require('request'); // Simple HTTP Requests
+const request = require('request'); // Simple HTTP Requests
 
 
 class Webhook {
-    // Constructors
+    // CONSTRUCTORS
     constructor(url, username, message, tts = false, avatar = null) {
-        // VARS
-        var data;
-        var options;
+        // Initiate Class Variables
+        this.data = null;
+        this.options = null;
 
         this.setupRequest(url, username, message, tts, avatar);
     }
 
-    // Methods
+    // METHODS
+    // Method that sets request data
     setupRequest(url, username, message, tts = false, avatar = null) {
         // Setup data Object
         this.data = {
@@ -31,21 +32,36 @@ class Webhook {
         };
     }
 
-    initRequest(callback_func) {
-        request(null, this.options, (err, res, body) => {
-            if (err) {
-                console.error('Webhook.js - Error');
-                console.error(err);
-            } else {
-                console.log("Webhook.js - Post Successful!");
-
-                // Call callback_func on Success
-                if (callback_func)
-                    callback_func();
+    // Method that initiates request from aquired data
+    // Returns a Promise with the response or error
+    initRequest() {
+        return new Promise((resolve, reject) => {
+            // Verify Valid Data
+            if (!this.options.url) {
+                return reject("Failed! No URL"); // No URL
+            } else if (!this.data.username) {
+                return reject("Failed! No Username"); // No Username
+            } else if (!this.data.content) {
+                return reject("Failed! Empty Message"); // No Message
             }
+
+            // Initiate Request
+            request(null, this.options, (err, res, body) => {
+                if (err) {
+                    return reject(new Error("Request Failed! " + err)); // Request Failure
+                }
+
+                if (res.statusCode == 204) {
+                    return resolve("Success!"); // Webhook Posted!
+                } else {
+                    return reject("Failed! \nMessage:" + res.statusMessage); // Webhook Failed!
+                }
+            });
         });
     }
 }
 
 // MODULE EXPORTS
-module.exports.Webhook = Webhook;
+module.exports = {
+    Webhook
+};

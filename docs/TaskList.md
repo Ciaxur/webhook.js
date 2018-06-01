@@ -5,6 +5,8 @@
 ## Version 1.1 (*In Progress*)
 - [ ] Expand the **`Webhook`** Class
     - [ ] Add more Requests
+- [ ] Add more **`Jest`** Tests
+    - [ ] Failure Tests
 - [x] Add **`Jest`** for project testing
 - [x] Re-Organize project directory
 - [x] Convert to **`Promise`** based requests

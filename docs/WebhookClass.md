@@ -10,16 +10,18 @@ Setting up a Webhook POST Request:
 
 ```javascript
 // Import Exported from Modules
-let { Webhook } = require('app.js');
+const { Webhook } = require('app.js');
 
 // Creating the Webhook class
 let hook = new Webhook(url, username, message, tts, avatar);
 
-// Initiating Request
-hook.initRequest();
-
 // Setting up a Request
 hook.setupRequest(url, username, message, tts, avatar);
+
+// Initiating Request (returns a Promise)
+hook.initRequest()
+    .then(res => console.log("Action on Success Goes Here..."))
+    .catch(err => console.log("Action on Failure Goes Here..."));
 ```
 
 | Parameters            | Description                                          |
@@ -29,3 +31,12 @@ hook.setupRequest(url, username, message, tts, avatar);
 | `message` (*string*)  | The message displayed by the Webhook                 |
 | `tts` (*bool*)        | Text-To-Speach                                       |
 | `avatar` (*string*)   | Webhook Avatar URL                                   |
+
+---
+
+## **`Webhook Class`** Methods
+
+| Method                | Requires        | Returns         |
+|  :-------------:      | :-------------: | :-------------: |
+| `setupRequest`        |  WebhookURL, Username, Message, TextToSpeach, AvatarURL | Nothing |
+| `initRequest`         |  Nothing        | **``Promise``** |

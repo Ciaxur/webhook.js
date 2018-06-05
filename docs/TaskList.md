@@ -4,7 +4,10 @@
 
 ## Version 1.1 (*In Progress*)
 - [ ] Expand the **`Webhook`** Class
-    - [ ] Add more Requests
+    - [ ] Add more Discord POST Options
+- [ ] Reorganize Class to adapt to Different Options
+    - [ ] More meaningful Function Names
+    - [ ] Better Class Name
 - [ ] Add more **`Jest`** Tests
     - [ ] Failure Tests
 - [x] Add **`Jest`** for project testing

@@ -7,11 +7,13 @@
     - [ ] Add Directories for Compiled Outputs called **`out`**
     - [ ] Exclude all Files in the **`out`** directory as it is ONLY for compilation purposes
     - [ ] Adapt **`TSLint`** Config
-
-## Version 1.1 (*In Progress*)
 - [ ] Reorganize Class
     - [ ] More meaningful Function Names
     - [ ] Better Class Name
+    - [ ] Seperate Child Classes for Specific Webhooks
+    - [ ] Modify main **`Webhook`** Class to be an *Abstract* Class Type
+
+## Version 1.1
 - [x] Add more **`Jest`** Tests
     - [x] Failure Tests
 - [x] Add **`Jest`** for project testing

@@ -2,10 +2,14 @@
 
 **Program future fixes and updates:**
 
+## Version 1.1.1 (*Upcoming*)
+- [ ] Translate Entire Github Repo to **`TypeScript`**
+    - [ ] Add Directories for Compiled Outputs called **`out`**
+    - [ ] Exclude all Files in the **`out`** directory as it is ONLY for compilation purposes
+    - [ ] Adapt **`TSLint`** Config
+
 ## Version 1.1 (*In Progress*)
-- [ ] Expand the **`Webhook`** Class
-    - [ ] Add more Discord POST Options
-- [ ] Reorganize Class to adapt to Different Options
+- [ ] Reorganize Class
     - [ ] More meaningful Function Names
     - [ ] Better Class Name
 - [ ] Add more **`Jest`** Tests

@@ -12,8 +12,8 @@
 - [ ] Reorganize Class
     - [ ] More meaningful Function Names
     - [ ] Better Class Name
-- [ ] Add more **`Jest`** Tests
-    - [ ] Failure Tests
+- [x] Add more **`Jest`** Tests
+    - [x] Failure Tests
 - [x] Add **`Jest`** for project testing
 - [x] Re-Organize project directory
 - [x] Convert to **`Promise`** based requests

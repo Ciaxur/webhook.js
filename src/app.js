@@ -7,7 +7,7 @@ const request = require('request'); // Simple HTTP Requests
  * Creates a Webhook and Initiates a POST Request
  *      Returns a Promise with Errors and Responses
  */
-export class Webhook {
+class Webhook {
     /** Constructs Main Webhook 
      * @param {String} url Webhook URL to POST to
      * @param {String} username Username displayed
@@ -78,3 +78,8 @@ export class Webhook {
         });
     }
 }
+
+// Module Export
+module.exports = {
+    Webhook
+};

@@ -1,4 +1,4 @@
-# Webhook `Class` Documentation
+# **`Webhook Class`** Documentation
 
 Information about the Webhook class and what data is required for initiating `requests`.
 
@@ -6,11 +6,22 @@ Information about the Webhook class and what data is required for initiating `re
 
 ## **`POST`** Requests
 
-### **`CreateHook`** Method
+Setting up a Webhook POST Request:
 
 ```javascript
+// Import Exported from Modules
+const { Webhook } = require('app.js');
+
 // Creating the Webhook class
-let webhook = CreateHook(url, username, message, tts, avatar);
+let hook = new Webhook(url, username, message, tts, avatar);
+
+// Setting up a Request
+hook.setupRequest(url, username, message, tts, avatar);
+
+// Initiating Request (returns a Promise)
+hook.initRequest()
+    .then(res => console.log("Action on Success Goes Here..."))
+    .catch(err => console.log("Action on Failure Goes Here..."));
 ```
 
 | Parameters            | Description                                          |
@@ -20,3 +31,12 @@ let webhook = CreateHook(url, username, message, tts, avatar);
 | `message` (*string*)  | The message displayed by the Webhook                 |
 | `tts` (*bool*)        | Text-To-Speach                                       |
 | `avatar` (*string*)   | Webhook Avatar URL                                   |
+
+---
+
+## **`Webhook Class`** Methods
+
+| Method                | Requires        | Returns         |
+|  :-------------:      | :-------------: | :-------------: |
+| `setupRequest`        |  WebhookURL, Username, Message, TextToSpeach, AvatarURL | Nothing |
+| `initRequest`         |  Nothing        | **``Promise``** |

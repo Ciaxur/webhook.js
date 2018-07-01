@@ -38,23 +38,23 @@ class Webhook {
         return new Promise((resolve, reject) => {
             // Verify Valid Data
             if (!this.options.url) {
-                return reject("Failed! No URL"); // No URL
+                return reject("Request Initiate Failed! Error: No URL"); // No URL
             } else if (!this.data.username) {
-                return reject("Failed! No Username"); // No Username
+                return reject("Request Initiate Failed! Error: No Username"); // No Username
             } else if (!this.data.content) {
-                return reject("Failed! Empty Message"); // No Message
+                return reject("Request Initiate Failed! Error: Empty Message"); // No Message
             }
 
             // Initiate Request
-            request(null, this.options, (err, res, body) => {
+            request(null, this.options, (err, res) => {
                 if (err) {
-                    return reject(new Error("Request Failed! " + err)); // Request Failure
+                    return reject(new Error("Request Failed! Error: " + err)); // Request Failure
                 }
 
                 if (res.statusCode == 204) {
-                    return resolve("Success!"); // Webhook Posted!
+                    return resolve("Webhook POST Request Success!"); // Webhook Posted!
                 } else {
-                    return reject("Failed! \nMessage:" + res.statusMessage); // Webhook Failed!
+                    return reject("Webhook POST Failed! \nMessage:" + res.statusMessage); // Webhook Failed!
                 }
             });
         });

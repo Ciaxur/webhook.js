@@ -1,9 +1,20 @@
 // MODULE INIT
 const request = require('request'); // Simple HTTP Requests
 
-
-class Webhook {
-    // CONSTRUCTORS
+/**
+ * Main Webhook Class
+ * 
+ * Creates a Webhook and Initiates a POST Request
+ *      Returns a Promise with Errors and Responses
+ */
+export class Webhook {
+    /** Constructs Main Webhook 
+     * @param {String} url Webhook URL to POST to
+     * @param {String} username Username displayed
+     * @param {String} message Message to be Posted
+     * @param {Boolean} tts Text to Speach (Optional)
+     * @param {String} avatar Avatar Image URL (Optional)
+     */
     constructor(url, username, message, tts = false, avatar = null) {
         // Initiate Class Variables
         this.data = null;
@@ -13,7 +24,13 @@ class Webhook {
     }
 
     // METHODS
-    // Method that sets request data
+    /** Method that sets request data
+     * @param {String} url Webhook URL to POST to
+     * @param {String} username Username displayed
+     * @param {String} message Message to be Posted
+     * @param {Boolean} tts Text to Speach (Optional)
+     * @param {String} avatar Avatar Image URL (Optional)
+     */
     setupRequest(url, username, message, tts = false, avatar = null) {
         // Setup data Object
         this.data = {
@@ -32,8 +49,9 @@ class Webhook {
         };
     }
 
-    // Method that initiates request from aquired data
-    // Returns a Promise with the response or error
+    /** Initiates request from aquired data
+     * @returns A Promise with the response or error
+     */
     initRequest() {
         return new Promise((resolve, reject) => {
             // Verify Valid Data
@@ -60,8 +78,3 @@ class Webhook {
         });
     }
 }
-
-// MODULE EXPORTS
-module.exports = {
-    Webhook
-};

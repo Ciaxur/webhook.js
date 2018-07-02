@@ -8,15 +8,15 @@ Information about the Webhook class and what data is required for initiating `re
 
 Setting up a Webhook POST Request:
 
-```javascript
-// Import Exported from Modules
-const { Webhook } = require('app.js');
+```typescript
+// Import Exported from Modules (Webhook.ts Location)
+import { Webhook } from './Webhook.ts'
 
 // Creating the Webhook class
-let hook = new Webhook(url, username, message, tts, avatar);
+const hook = new Webhook(url, username, message, avatar, tts);
 
 // Setting up a Request
-hook.setupRequest(url, username, message, tts, avatar);
+hook.setupRequest(url, username, message, avatar, tts);
 
 // Initiating Request (returns a Promise)
 hook.initRequest()
@@ -29,8 +29,8 @@ hook.initRequest()
 | `url` (*string*)      | The [Webhook Link](https://support.discordapp.com/hc/en-us/articles/228383668) for a Channel     |
 | `username` (*string*) | The Webhook Name (*Your Choice*)                     |
 | `message` (*string*)  | The message displayed by the Webhook                 |
-| `tts` (*bool*)        | Text-To-Speach                                       |
 | `avatar` (*string*)   | Webhook Avatar URL                                   |
+| `tts` (*boolean*)        | Text-To-Speach                                    |
 
 ---
 
@@ -38,5 +38,5 @@ hook.initRequest()
 
 | Method                | Requires        | Returns         |
 |  :-------------:      | :-------------: | :-------------: |
-| `setupRequest`        |  WebhookURL, Username, Message, TextToSpeach, AvatarURL | Nothing |
+| `setupRequest`        |  WebhookURL, Username, Message, AvatarURL, TextToSpeach | Nothing |
 | `initRequest`         |  Nothing        | **``Promise``** |

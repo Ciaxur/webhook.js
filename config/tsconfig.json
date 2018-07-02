@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "noImplicitAny": false,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        
+        "sourceMap": true,              // Chrome Debug Points to TS Lines instead of JS Lines
+        "moduleResolution": "classic",
+        "outDir": "../out/"
+    },
+    "include": [
+        "../src/**/*"
+    ]
+}

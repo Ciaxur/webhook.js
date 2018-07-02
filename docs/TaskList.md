@@ -2,16 +2,18 @@
 
 **Program future fixes and updates:**
 
-## Version 1.1.1 (*Upcoming*)
-- [ ] Translate Entire Github Repo to **`TypeScript`**
-    - [ ] Add Directories for Compiled Outputs called **`out`**
-    - [ ] Exclude all Files in the **`out`** directory as it is ONLY for compilation purposes
-    - [ ] Adapt **`TSLint`** Config
+## Version 1.1.2 (*Upcoming*)
 - [ ] Reorganize Class
     - [ ] More meaningful Function Names
     - [ ] Better Class Name
     - [ ] Seperate Child Classes for Specific Webhooks
     - [ ] Modify main **`Webhook`** Class to be an *Abstract* Class Type
+
+## Version 1.1.1
+- [x] Translate Entire Github Repo to **`TypeScript`**
+    - [x] Add Directories for Compiled Outputs called **`out`**
+    - [x] Exclude all Files in the **`out`** directory as it is ONLY for compilation purposes
+    - [x] Adapt **`TSLint`** Config
 
 ## Version 1.1
 - [x] Add more **`Jest`** Tests

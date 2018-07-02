@@ -4,7 +4,7 @@
     "description": "Discord Webhook POST using JavaScript",
     "main": "./src/app.js",
     "scripts": {
-        "start": "node ./src/app.js",
+        "build": "tsc -p ./config/tsconfig.json",
         "test": "jest ./test/"
     },
     "author": "Omar Omar",
@@ -13,6 +13,7 @@
         "request": "^2.85.0"
     },
     "devDependencies": {
+        "@types/request": "^2.47.1",
         "jest": "^23.1.0"
     }
 }

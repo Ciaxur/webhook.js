@@ -1,0 +1,4 @@
+{
+    "tslint.configFile": "./config/tslint.json",
+    "tslint.run": "onType"
+}

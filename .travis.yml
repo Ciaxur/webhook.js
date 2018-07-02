@@ -3,8 +3,10 @@ node_js:
   - "8.11.2"
 install:
   - npm install
+  - npm i typescript@2.9.1 -g
 cache:
   directories:
     - "node_modules"
 script: 
+  - npm run build
   - npm test

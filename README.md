@@ -8,24 +8,19 @@
 The Module Dependencies used:
 - `request` - A simplified HTTP client.
 
-Required files for **webhook.js**:
-
-- `package.json` - Holds the metadata relevant to the project.
-- `app.js` - Main application functionality.
-
 ---
 
 ## How To Use
 
-In order to run **webhook.js**, you will need to have `npm` and `node` installed. These are instructions on how to obtain and run the application:
+In order to run **webhook.js**, you will need to have `npm` and `node` installed. These are instructions on how to obtain and get application ready:
 
 ```bash
 # Clone this repository
 git clone https://github.com/Ciaxur/webhook.js
 # Install dependencies
 npm install
-# Run the app
-npm start
+# Build the App
+npm build
 ```
 
 Note: As of the current version of this module, you will need to hard-code in multiple variables for the Webhook to post.
@@ -35,8 +30,14 @@ Note: As of the current version of this module, you will need to hard-code in mu
 Simple npm commands to run the application easier:
 
 ```bash
-# Run the app
-npm start
+# Install Required Modules
+npm install
+
+# Build src Files
+npm run build
+
+# Testing (Using Jest)
+npm test
 ```
 
 ### `Webhook` Class
@@ -45,7 +46,7 @@ Javascript class mini-documentation:
 
 ```javascript
 // Webhook Class Initation Requirements
-let webhook = new Webhook(url, username, msg, ttl, avatar_url);
+const webhook = new Webhook(url, username, msg, avatar_url, ttl);
 
 // Initiating the Webhook Request
 webhook.initRequest();

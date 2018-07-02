@@ -23,6 +23,5 @@ A simple neat filing system should be followed in order to stay organized:
 - **`docs`** - Documentations Directory
 - **`test`** - Test Builds Directory
     - Project Testing using `Jest`
-- **`resources`** - Resource Directory
-    - Files such as images
+- **`config`** - Configurations Directory
 - **`src`** - Project Source Code Directory
